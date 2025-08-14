@@ -41,7 +41,7 @@ public class StripePaymentGateway implements IPaymentGateway {
             PriceCreateParams params = PriceCreateParams.builder().setCurrency("usd")
                     .setUnitAmount(amount)
                     .setRecurring(PriceCreateParams.Recurring.builder().setInterval(PriceCreateParams.Recurring.Interval.MONTH).build())
-                    .setProductData(PriceCreateParams.ProductData.builder().setName("FlipMemShip Plan").build()).build();
+                    .setProductData(PriceCreateParams.ProductData.builder().setName("Prime Plan").build()).build();
             Price price = Price.create(params);
             return price;
         } catch (StripeException exception) {
